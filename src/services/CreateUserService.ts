@@ -1,15 +1,16 @@
-    import { response } from "express";
+import { hash } from "bcryptjs"
 import { getCustomRepository } from "typeorm";
-    import { UserRepositories } from "../repositories/UserRepositories";
+import { UserRepositories } from "../repositories/UserRepositories";
 
     interface IUserRequest {
         name: string;
         email: string;
         admin?: boolean;
+        password: string;
     }
 
     class CreateUserService {
-        async execute({name, email, admin}: IUserRequest) {
+        async execute({name, email, admin = false, password}: IUserRequest) {
             const usersRepository = getCustomRepository(UserRepositories);
             if(!email) {
                 throw new Error("Email incorrect");
@@ -23,10 +24,13 @@ import { getCustomRepository } from "typeorm";
                 
                 
             }
+
+            const passwordHash = await hash(password, 8);
             const user = usersRepository.create ({
                 name,
                 email,
                 admin,
+                password: passwordHash,
             });
             await usersRepository.save(user);
 
