@@ -6,9 +6,9 @@ import { CreateComplimentService } from "../services/CreateComplimentService"
             
             const {
                 tag_id,
-                user_sender,
                 user_receiver,
                 message } = request.body;
+            const { user_id} = request
 
                 const createComplimentService = new CreateComplimentService()
                 
@@ -16,7 +16,7 @@ import { CreateComplimentService } from "../services/CreateComplimentService"
                 const compliments = await createComplimentService.execute({
                 tag_id,
                 user_receiver,
-                user_sender,
+                user_sender: user_id,
                 message,
                 });
 
