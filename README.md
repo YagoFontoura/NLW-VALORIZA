@@ -2,7 +2,7 @@
 
 ![preview](/assets/preview.png)
 
-This project was developed with the following technologies:
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🎓 Tecnologias
 - [Node.js](https://nodejs.org/en/)
@@ -13,15 +13,15 @@ This project was developed with the following technologies:
 
 ## 💻 Projeto
 
-Valoriza is a platform to promote recognition among teammates.
+Valoriza é uma plataforma para promover o reconhecimento entre os companheiros de equipe.
 
 ## 🚀 Como executar
 ```
-- Clone the repository
-- Run `yarn` to download dependencies
-- Run `yarn typeorm migration:run` to create the database tables.
-- Run `yarn start` to start the application..
+- Clone o repositório
+- Execute `yarn` para baixar dependências
+- Execute `yarn typeorm migration: run` para criar as tabelas do banco de dados.
+- Execute `yarn start` para iniciar o aplicativo.
 
 ````
 
-Made with 💜 by Yago B. Fontoura and RocketSeat 👋🏼 See my <a href ="https://www.linkedin.com/in/yago-fontoura/">Linkedin</a> 
+Feito com 💜 por Yago B. Fontoura e RocketSeat 👋🏼 Veja meu <a href ="https://www.linkedin.com/in/yago-fontoura/">Linkedin</a> 
